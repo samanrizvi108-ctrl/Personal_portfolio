@@ -155,22 +155,6 @@ a { color: inherit; text-decoration: none; }
   background: linear-gradient(160deg, #2a211d, #14110f);
   z-index: 5;
 }
-/* 3D orb as a subtle accent behind the portrait (right side) */
-.orb-wrap {
-  position: absolute;
-  top: 50%;
-  right: 7vw;
-  left: auto;
-  width: 320px;
-  height: 320px;
-  transform: translateY(-50%);
-  z-index: 0;
-  opacity: 0.5;
-  pointer-events: none;
-}
-.orb-wrap .hero-orbit.accent { opacity: 0.5; }
-.orb-wrap .hero-orbit.accent canvas { filter: hue-rotate(-8deg) saturate(1.15) brightness(1.1); }
-
 /* left-side readability scrim so the headline stays legible over the photo/orb */
 .glass-hero::after {
   content: "";
@@ -612,7 +596,6 @@ a { color: inherit; text-decoration: none; }
   /* portrait centered above copy on tablets/small */
   .glass-hero { justify-content: center; padding: 0 6vw; }
   .portrait { right: 50%; transform: translate(50%, -50%); top: 38%; width: clamp(220px, 52vw, 360px); height: clamp(280px, 66vw, 440px); }
-  .orb-wrap { right: 50%; transform: translate(50%, -50%); }
   .glass-hero-copy { text-align: center; max-width: 720px; margin-top: 46vh; }
   .glass-hero::after { background: linear-gradient(180deg, rgba(20,17,15,0.2) 0%, rgba(20,17,15,0.78) 60%); }
   .cta-group { justify-content: center; }

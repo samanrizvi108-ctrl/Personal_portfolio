@@ -3,7 +3,6 @@ import { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import GlassRain from './GlassRain'
 import GhibliCutout from './GhibliCutout'
-import { OrbitalSphereBackground } from '@designcodeio/threeui/components/OrbitalSphereBackground'
 
 const line1 = ['Precision', 'in', 'Finance']
 const line2 = ['Passion', 'for', 'People']
@@ -28,12 +27,9 @@ export default function GlassHero() {
 
   return (
     <section id="home" className="glass-hero" ref={ref}>
-      {/* crimson glow + orb behind the glass */}
+      {/* crimson glow behind the glass */}
       <motion.div className="glass-hero-bg" style={{ scale, filter: `blur(${0}px)` }}>
         <div className="crimson-glow" />
-        <div className="orb-wrap">
-          <OrbitalSphereBackground className="hero-orbit accent" />
-        </div>
       </motion.div>
 
       {/* frosted pane with rain-on-glass — sits ABOVE the glow/orb, BELOW the portrait */}
