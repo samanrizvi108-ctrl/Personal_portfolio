@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { useState, useEffect, useRef } from 'react'
 import { ParticleDrift } from '@designcodeio/threeui/components/ParticleDrift'
 import { Reveal, Page } from '../motion'
 
@@ -10,21 +11,68 @@ const VALUES = [
 
 const SKILLS = ['Finance Coordination', 'Marketing', 'Event Management', 'Operations', 'Student Engagement', 'Communications', 'Reporting', 'Scheduling']
 
+const FACTS = [
+  { k: 'Role', v: 'Assistant Coordinator' },
+  { k: 'Program', v: 'Joyful Yatra Enabling' },
+  { k: 'Education', v: 'B.Com Graduate' },
+  { k: 'Based in', v: 'Lucknow, India' },
+]
+
+// Squircle portrait with a "half-cutout" — a transparent PNG (background removed,
+// subject's head extending above the frame) breaks out of the rounded-square top.
+// Falls back to the plain JPG inside the squircle if the cutout isn't present.
+function AboutPortrait() {
+  const ref = useRef(null)
+  const [cutout, setCutout] = useState(false)
+  useEffect(() => {
+    const img = ref.current
+    if (!img) return
+    img.onload = () => {
+      // a real cutout is a PNG with transparency; treat load as cutout-ready
+      if (img.getAttribute('src')?.endsWith('.png')) setCutout(true)
+    }
+    img.onerror = () => { if (img.getAttribute('src')?.endsWith('.png')) { img.src = '/saman.jpg'; setCutout(false) } }
+  }, [])
+  return (
+    <div className={'about-portrait' + (cutout ? ' is-cutout' : '')}>
+      <img ref={ref} src="/saman-cutout.png" alt="Saman Rizvi" className="portrait-img-el" />
+      {!cutout && <div className="about-portrait-duotone" />}
+    </div>
+  )
+}
+
 export default function About() {
   return (
     <Page>
       <div className="page-inner about-page">
       <ParticleDrift className="page-field alt" />
 
-      <Reveal>
-        <span className="section-kicker">About</span>
-        <h1 className="page-title">Saman Rizvi</h1>
-        <p className="page-lede">
-          B.Com graduate and Assistant Coordinator for the Joyful Yatra Enabling Program at
-          City Montessori School, Lucknow. I sit at the intersection of finance and people —
-          the person who makes sure the plan is funded, the message lands, and the day runs smooth.
-        </p>
-      </Reveal>
+      {/* intro: text + facts on the left, photo on the right (above "How I work") */}
+      <div className="about-intro">
+        <Reveal className="about-intro-text">
+          <span className="section-kicker">About</span>
+          <h1 className="page-title">Saman Rizvi</h1>
+          <p className="page-lede">
+            I'm a B.Com graduate and Assistant Coordinator for the Joyful Yatra Enabling Program at
+            City Montessori School, Lucknow — where I live at the intersection of finance and people.
+            I'm the person who makes sure a program is funded, the message lands clearly, and the day
+            runs smoothly for everyone involved. Calm under logistics, warm with people, and quietly
+            obsessed with the details that make an experience feel effortless.
+          </p>
+          <ul className="about-facts">
+            {FACTS.map((f) => (
+              <li key={f.k}>
+                <span className="fact-k">{f.k}</span>
+                <span className="fact-v">{f.v}</span>
+              </li>
+            ))}
+          </ul>
+        </Reveal>
+
+        <Reveal className="about-photo" delay={0.05}>
+          <AboutPortrait />
+        </Reveal>
+      </div>
 
       <div className="about-split">
         <Reveal className="about-bio">

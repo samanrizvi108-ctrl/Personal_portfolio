@@ -1,7 +1,8 @@
-import { Routes, Route, useLocation, useNavigationType } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion, useScroll, useSpring } from 'framer-motion'
 import { useEffect } from 'react'
 import PillNav from './components/PillNav'
+import RainCanvas from './components/RainCanvas'
 import Home from './pages/Home'
 import Work from './pages/Work'
 import About from './pages/About'
@@ -39,6 +40,9 @@ export default function App() {
       <PillNav />
 
       <ScrollToTop />
+
+      {/* global atmospheric rain across the whole site */}
+      <RainCanvas opacity={0.5} zIndex={900} density={1} />
 
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>

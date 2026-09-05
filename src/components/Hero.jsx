@@ -1,6 +1,5 @@
 import { motion, useScroll, useTransform, useMotionValueEvent } from 'framer-motion'
 import { useRef } from 'react'
-import { OrbitalSphereBackground } from '@designcodeio/threeui/components/OrbitalSphereBackground'
 
 const line1 = ['Precision', 'in', 'Finance']
 const line2 = ['Passion', 'for', 'People']
@@ -100,7 +99,6 @@ export default function Hero() {
         transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
         whileHover={{ scale: 1.03, rotate: -1.5 }}
       >
-        <OrbitalSphereBackground className="hero-orbit" />
         <span className="corner-accent" />
         <span className="initials">SR</span>
       </motion.div>
