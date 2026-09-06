@@ -56,7 +56,7 @@ export default function About() {
           <p className="page-lede">
             I'm a B.Com graduate, now working as a Career Counsellor and English Trainer at
             the <strong>National Institute of Language (NIL)</strong>. Before this, I spent a year
-            as Assistant Coordinator for the <strong>Junior Youth Empowerment Programme (JYEP)</strong> at
+            as an Assistant Coordinator for the <strong>Junior Youth Empowerment Programme (JYEP)</strong> at
             City Montessori School, Lucknow — where I lived at the intersection of finance and people.
             I'm the person who makes sure a program is funded, the message lands clearly, and the day
             runs smoothly for everyone involved. Calm under logistics, warm with people, and quietly
