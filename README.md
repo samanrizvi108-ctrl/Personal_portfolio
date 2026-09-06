@@ -2,7 +2,7 @@
 
 A modern, motion-rich personal portfolio for **Saman Rizvi** — Career Counsellor & English Trainer at the **National Institute of Language (NIL)**, previously Assistant Coordinator for the **Junior Youth Empowerment Programme (JYEP)** at City Montessori School, Lucknow.
 
-🌐 **Live:** [editorial-portfolio-two.vercel.app](https://editorial-portfolio-two.vercel.app/)
+🌐 **Live:** [samanrizvi.vercel.app](https://samanrizvi.vercel.app/)
 📦 **Repo:** [github.com/samanrizvi108-ctrl/Personal_portfolio](https://github.com/samanrizvi108-ctrl/Personal_portfolio)
 
 ---
@@ -10,19 +10,19 @@ A modern, motion-rich personal portfolio for **Saman Rizvi** — Career Counsell
 ## Screenshots
 
 ### Home — Botanical theme (default)
-![Home — Botanical theme](https://editorial-portfolio-two.vercel.app/screenshots/prod-home.png)
+![Home — Botanical theme](https://samanrizvi.vercel.app/screenshots/prod-home.png)
 
 ### Work
-![Work](https://editorial-portfolio-two.vercel.app/screenshots/prod-work.png)
+![Work](https://samanrizvi.vercel.app/screenshots/prod-work.png)
 
 ### About
-![About](https://editorial-portfolio-two.vercel.app/screenshots/prod-about.png)
+![About](https://samanrizvi.vercel.app/screenshots/prod-about.png)
 
 ### Contact
-![Contact](https://editorial-portfolio-two.vercel.app/screenshots/prod-contact.png)
+![Contact](https://samanrizvi.vercel.app/screenshots/prod-contact.png)
 
 ### Theme Demo (A/B preview)
-![Theme Demo](https://editorial-portfolio-two.vercel.app/screenshots/prod-theme-demo.png)
+![Theme Demo](https://samanrizvi.vercel.app/screenshots/prod-theme-demo.png)
 
 ---
 
