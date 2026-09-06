@@ -5,16 +5,22 @@ import { Reveal, Page } from '../motion'
 
 const PROJECTS = [
   {
-    tag: 'Program Coordination',
-    title: 'Joyful Yatra Enabling Program',
-    desc: 'As Assistant Coordinator at City Montessori School, I keep student initiatives organized, funded, and on schedule — from planning decks to day-of logistics.',
+    tag: 'Career & Language',
+    title: 'National Institute of Language (NIL)',
+    desc: 'Just joined as Career Counsellor & English Trainer — designing sessions, coaching 1:1, and building curriculum for the new cohort.',
     span: 'wide',
+  },
+  {
+    tag: 'Program Coordination',
+    title: 'Junior Youth Empowerment Programme',
+    desc: 'As Assistant Coordinator at City Montessori School, I kept student initiatives organized, funded, and on schedule — from planning decks to day-of logistics.',
+    span: 'tall',
   },
   {
     tag: 'Finance',
     title: 'Budget & Expense Tracking',
     desc: 'Built lightweight tracking for program spend so every rupee is accountable and reporting takes minutes, not hours.',
-    span: 'tall',
+    span: 'normal',
   },
   {
     tag: 'Marketing',

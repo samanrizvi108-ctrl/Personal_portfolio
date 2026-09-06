@@ -9,11 +9,12 @@ const VALUES = [
   { t: 'Care', d: 'Small details in comms and logistics are what make a program feel effortless.' },
 ]
 
-const SKILLS = ['Finance Coordination', 'Marketing', 'Event Management', 'Operations', 'Student Engagement', 'Communications', 'Reporting', 'Scheduling']
+const SKILLS = ['Career Counselling', 'English Training', 'Curriculum Design', 'Public Speaking', 'Student Mentorship', 'Finance Coordination', 'Event Management', 'Operations']
 
 const FACTS = [
-  { k: 'Role', v: 'Assistant Coordinator' },
-  { k: 'Program', v: 'Joyful Yatra Enabling' },
+  { k: 'Current Role', v: 'Career Counsellor & English Trainer' },
+  { k: 'Institute', v: 'National Institute of Language (NIL)' },
+  { k: 'Previously', v: 'JYEP · City Montessori School' },
   { k: 'Education', v: 'B.Com Graduate' },
   { k: 'Based in', v: 'Lucknow, India' },
 ]
@@ -53,8 +54,10 @@ export default function About() {
           <span className="section-kicker">About</span>
           <h1 className="page-title">Saman Rizvi</h1>
           <p className="page-lede">
-            I'm a B.Com graduate and Assistant Coordinator for the Joyful Yatra Enabling Program at
-            City Montessori School, Lucknow — where I live at the intersection of finance and people.
+            I'm a B.Com graduate, now working as a Career Counsellor and English Trainer at
+            the <strong>National Institute of Language (NIL)</strong>. Before this, I spent a year
+            as Assistant Coordinator for the <strong>Junior Youth Empowerment Programme (JYEP)</strong> at
+            City Montessori School, Lucknow — where I lived at the intersection of finance and people.
             I'm the person who makes sure a program is funded, the message lands clearly, and the day
             runs smoothly for everyone involved. Calm under logistics, warm with people, and quietly
             obsessed with the details that make an experience feel effortless.
@@ -67,6 +70,15 @@ export default function About() {
               </li>
             ))}
           </ul>
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary about-resume-btn"
+          >
+            View Resume
+            <span aria-hidden="true">↗</span>
+          </a>
         </Reveal>
 
         <Reveal className="about-photo" delay={0.05}>

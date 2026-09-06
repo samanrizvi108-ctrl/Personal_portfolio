@@ -1,22 +1,21 @@
-import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import GlassHero from '../components/GlassHero'
+import EditorialHero from '../components/EditorialHero'
 import { Reveal } from '../motion'
-
-const MOMENTS = [
-  { title: 'First Rain', note: 'The kind of evening that makes everything feel softer.' },
-  { title: 'Window Light', note: 'Watching the city blur behind the glass.' },
-  { title: 'Quiet Walk', note: 'No plans, just the sound of it falling.' },
-  { title: 'Warm Inside', note: 'Tea, blanket, and a storm outside.' },
-]
 
 const TIMELINE = [
   {
-    year: '2025 — Present',
+    year: '2025',
+    role: 'Career Counsellor & English Trainer',
+    org: 'National Institute of Language (NIL)',
+    detail:
+      'New role — guiding students on careers and training them in English communication, lesson design, and 1:1 mentorship.',
+  },
+  {
+    year: '2024 — 2025',
     role: 'Assistant Coordinator — JYEP',
     org: 'City Montessori School, Lucknow',
     detail:
-      'Coordinate the Joyful Yatra Enabling Program: scheduling, finance tracking, and keeping student-led initiatives on course.',
+      'Coordinated the Junior Youth Empowerment Programme: scheduling, finance tracking, and keeping student-led initiatives on course.',
   },
   {
     year: '2024',
@@ -36,7 +35,7 @@ const TIMELINE = [
 export default function Home() {
   return (
     <>
-      <GlassHero />
+      <EditorialHero />
 
       {/* content lifts up over the hero */}
       <div className="home-content">
@@ -76,33 +75,7 @@ export default function Home() {
           </Reveal>
         </section>
 
-        {/* Rainy Moments — personal, rain-themed gallery */}
-        <section className="moments">
-          <Reveal>
-            <span className="section-kicker">Rainy Moments</span>
-            <h2 className="section-title">Little things she loves</h2>
-          </Reveal>
-          <div className="moments-grid">
-            {MOMENTS.map((m, i) => (
-              <motion.article
-                key={m.title}
-                className="moment-card"
-                initial={{ opacity: 0, y: 40, scale: 0.94 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.7, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
-                whileHover={{ y: -8 }}
-              >
-                <div className="moment-rain" />
-                <div className="moment-inner">
-                  <h3>{m.title}</h3>
-                  <p>{m.note}</p>
-                </div>
-              </motion.article>
-            ))}
-          </div>
-        </section>
-      </div>
+        </div>
     </>
   )
 }
